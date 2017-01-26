@@ -1,0 +1,12 @@
+{
+  "name": "wide-river-canteen-camera-bot",
+  "version": "0.0.1",
+  "dependencies": {
+    "config": "^1.21.0",
+    "node-telegram-bot-api": "^0.26.0",
+    "rethinkdb": "^2.3.3"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node src/bot.js"
+  }
+}

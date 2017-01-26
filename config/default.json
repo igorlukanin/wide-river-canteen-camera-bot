@@ -1,0 +1,13 @@
+{
+    "telegram": {
+        "token": ""
+    },
+    "bot": {
+        "button": "Hungry!"
+    },
+    "rethinkdb": {
+      "host": "localhost",
+      "port": "28015",
+      "db": "wide_river_canteen_camera_bot"
+    }
+}
