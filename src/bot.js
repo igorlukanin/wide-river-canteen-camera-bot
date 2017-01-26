@@ -1,5 +1,6 @@
 const config = require('config');
 const fs = require('fs');
+const jimp = require('jimp');
 const request = require('request');
 const TelegramBot = require('node-telegram-bot-api');
 
@@ -8,6 +9,8 @@ const db = require('./db');
 
 const token = config.get('telegram.token');
 const button = config.get('bot.button');
+const width = config.get('bot.imageWidth');
+const height = config.get('bot.imageHeight');
 const username = config.get('camera.username');
 const password = config.get('camera.password');
 const snapshotUri = config.get('camera.snapshotUri');
@@ -20,8 +23,12 @@ const updateSnapshot = () => request(snapshotUri)
     .auth(username, password)
     .pipe(fs.createWriteStream(cacheTemporaryPath))
     .on('close', () => {
-        fs.createReadStream(cacheTemporaryPath)
-            .pipe(fs.createWriteStream(cachePath));
+        jimp.read(cacheTemporaryPath, (err, image) => {
+            image.scaleToFit(width, height).write(cacheTemporaryPath, () => {
+                fs.createReadStream(cacheTemporaryPath)
+                    .pipe(fs.createWriteStream(cachePath));
+            });
+        });
     });
 
 const createReplyMarkup = button => JSON.stringify({

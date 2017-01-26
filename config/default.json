@@ -3,7 +3,9 @@
         "token": ""
     },
     "bot": {
-        "button": "Hungry!"
+        "button": "Hungry!",
+        "imageWidth": 256,
+        "imageHeight": 180
     },
     "camera": {
         "username": "",
