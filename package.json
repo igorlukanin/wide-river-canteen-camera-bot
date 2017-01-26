@@ -4,6 +4,7 @@
   "dependencies": {
     "config": "^1.21.0",
     "node-telegram-bot-api": "^0.26.0",
+    "request": "^2.79.0",
     "rethinkdb": "^2.3.3"
   },
   "scripts": {

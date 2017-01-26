@@ -5,6 +5,12 @@
     "bot": {
         "button": "Hungry!"
     },
+    "camera": {
+        "username": "",
+        "password": "",
+        "snapshotUri": "",
+        "cacheIntervalMs": 20000
+    },
     "rethinkdb": {
       "host": "localhost",
       "port": "28015",

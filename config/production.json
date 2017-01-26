@@ -1,5 +1,10 @@
 {
     "telegram": {
         "token": ""
+    },
+    "camera": {
+        "username": "",
+        "password": "",
+        "snapshotUri": ""
     }
 }
