@@ -5,7 +5,8 @@
     "bot": {
         "button": "Hungry!",
         "imageWidth": 256,
-        "imageHeight": 180
+        "imageHeight": 180,
+        "restartIntervalMs": 600000
     },
     "camera": {
         "username": "",
