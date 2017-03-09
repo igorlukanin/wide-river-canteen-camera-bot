@@ -4,8 +4,8 @@
     },
     "bot": {
         "button": "Hungry!",
-        "imageWidth": 256,
-        "imageHeight": 180,
+        "imageWidth": 512,
+        "imageHeight": 360,
         "restartIntervalMs": 600000
     },
     "camera": {
